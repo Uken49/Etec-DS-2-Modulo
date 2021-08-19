@@ -1,0 +1,63 @@
+--Sql Server 2014 Express Edition
+--Batches are separated by 'go'
+
+select @@version as 'sql server version'
+CREATE DATABASE bdOficinaMecanica
+
+USE bdOficinaMecanica
+CREATE TABLE tbCliente(
+    idCliente INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeCliente VARCHAR(50) NOT NULL
+    ,rgCliente VARCHAR(15) NOT NULL UNIQUE
+)
+CREATE TABLE tbFoneCliente(
+    idFoneCliente INT PRIMARY KEY IDENTITY(1,1)
+    ,numFoneCliente VARCHAR(12)
+    ,idCliente INT FOREIGN KEY REFERENCES tbCliente(idCliente)
+)
+CREATE TABLE tbCor(
+    idCor INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeCor VARCHAR(30) NOT NULL
+)
+CREATE TABLE tbMarca(
+    idMarca INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeMarca VARCHAR(30) NOT NULL
+)
+CREATE TABLE tbModelo(
+    idModelo INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeModelo VARCHAR(30) NOT NULL
+    ,idMarca INT FOREIGN KEY REFERENCES tbMarca(idMarca)
+)
+CREATE TABLE tbVeiculo(
+    idVeiculo INT PRIMARY KEY IDENTITY(1,1)
+    ,placaVeiculo CHAR(7) NOT NULL UNIQUE
+    ,kmVeiculo INT NOT NULL
+    ,chassiVeiculo CHAR(17) NOT NULL UNIQUE
+    ,idCor INT FOREIGN KEY REFERENCES tbCor(idCor)
+    ,idCliente INT FOREIGN KEY REFERENCES tbCliente(idCliente)
+    ,idModelo INT FOREIGN KEY REFERENCES tbModelo(idModelo)
+)
+CREATE TABLE tbOrcamento(
+    idOrcamento INT PRIMARY KEY IDENTITY(1,1)
+    ,dataOrcamento SMALLDATETIME
+    ,dataValidade SMALLDATETIME
+    ,valorTotal MONEY NOT NULL
+    ,idVeiculo INT FOREIGN KEY REFERENCES tbVeiculo(idVeiculo)
+)
+CREATE TABLE tbOrdemServico(
+    idOrdemServico INT PRIMARY KEY IDENTITY(1,1)
+    ,idOrcamento INT FOREIGN KEY REFERENCES tbOrcamento(idOrcamento)
+    ,dataInicio SMALLDATETIME NOT NULL
+    ,dataFinal SMALLDATETIME NOT NULL
+)
+CREATE TABLE tbServico(
+    idServico INT PRIMARY KEY IDENTITY(1,1)
+    ,descServico VARCHAR(50)
+    ,valorServico MONEY NOT NULL
+)
+CREATE TABLE tbItemOrcamento(
+    idItemOrcamento INT PRIMARY KEY IDENTITY(1,1)
+    ,idOrcamento INT FOREIGN KEY REFERENCES tbOrcamento(idOrcamento)
+    ,idServico INT FOREIGN KEY REFERENCES tbServico(idServico)
+    ,subTotal MONEY NOT NULL
+)

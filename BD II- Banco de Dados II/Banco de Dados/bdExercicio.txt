@@ -1,0 +1,21 @@
+CREATE DATABASE bdExercicio
+
+USE bdExercicio
+
+CREATE TABLE tbDadosFunc(
+  idDadosFunc INT PRIMARY KEY IDENTITY
+  ,nomeFunc VARCHAR(60) NOT NULL
+  ,uf VARCHAR(2) NOT NULL
+  ,idade INT NOT NULL
+  ,qtdeFilhos INT NOT NULL
+)
+
+CREATE TABLE tbFunc(
+  idFunc INT PRIMARY KEY IDENTITY
+  ,idDadosFunc INT FOREIGN KEY REFERENCES tbDadosFunc(idDadosFunc)
+  ,cargo VARCHAR(60) NOT NULL
+  ,salario SMALLMONEY NOT NULL
+  ,tempoEmpresa INT NOT NULL
+  ,tempoCargo INT NOT NULL
+  ,sidicalizado INT NOT NULL
+)

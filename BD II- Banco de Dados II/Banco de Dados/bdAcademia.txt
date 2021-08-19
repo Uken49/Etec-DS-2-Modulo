@@ -1,0 +1,48 @@
+--Sql Server 2014 Express Edition
+--Batches are separated by 'go'
+
+select @@version as 'sql server version'
+CREATE DATABASE bdAcademia
+
+USE bdAcademia
+CREATE TABLE tbProfessor(
+    idProfessor INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeProfessor VARCHAR (50) NOT NULL
+)
+CREATE TABLE tbFoneProfessor(
+    idFoneProfessor INT PRIMARY KEY IDENTITY(1,1)
+    ,numFoneProfessor VARCHAR(12)
+    ,idProfessor INT FOREIGN KEY REFERENCES tbProfessor(idProfessor)
+)
+CREATE TABLE tbHorario(
+    idHorario INT PRIMARY KEY IDENTITY(1,1)
+    ,descHorario VARCHAR(50)
+)
+CREATE TABLE tbModalidade(
+    idModalidade INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeModalidade VARCHAR(30) NOT NULL
+    ,idProfessor INT FOREIGN KEY REFERENCES tbProfessor(idProfessor)
+    ,idHorario INT FOREIGN KEY REFERENCES tbHorario(idHorario)
+)
+CREATE TABLE tbTipoPlano(
+    idTipoPlano INT PRIMARY KEY IDENTITY(1,1)
+    ,descTipoPlano VARCHAR(50) 
+)
+CREATE TABLE tbAluno(
+    idAluno INT PRIMARY KEY IDENTITY(1,1)
+    ,nomeAluno VARCHAR(50) NOT NULL
+    ,rgAluno VARCHAR(14) NOT NULL
+    ,cpf VARCHAR(14) UNIQUE
+)
+CREATE TABLE tbFoneAluno(
+    idFoneAluno INT PRIMARY KEY IDENTITY(1,1)
+    ,numFoneAluno VARCHAR(12)
+    ,idAluno INT FOREIGN KEY REFERENCES tbAluno(idAluno)
+)
+CREATE TABLE tbMatricula(
+    idMatricula INT PRIMARY KEY IDENTITY(1,1)
+    ,idAluno INT FOREIGN KEY REFERENCES tbAluno(idAluno)
+    ,idTipoPlano INT FOREIGN KEY REFERENCES tbTipoPlano(idTipoPlano)
+    ,idModalidade INT FOREIGN KEY REFERENCES tbModalidade(idModalidade)
+    ,dataMatricula SMALLDATETIME NOT NULL
+)

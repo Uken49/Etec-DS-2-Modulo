@@ -1,0 +1,37 @@
+USE bdLojasRoupas
+
+INSERT INTO tbFabricante (nomeFabricante)
+VALUES ('Malwee')
+        ,('Marisol')
+        ,('Cia da Malha')
+
+INSERT INTO tbFuncionario (nomeFuncionario,idadeFuncionario,dataAdmissao,salarioFuncionario)
+VALUES ('João Santana','45','07/04/2021',1800.54)
+        ,('Raquel Torres','26','30/06/2019',2596.11)
+
+INSERT INTO tbProduto (nomeProduto,precoProduto,dataEntradaProduto,codFuncionario,codFabricante)
+VALUES ('Tênis Balenciaga',8894.00,'15/03/2021',1,1)
+        ,('Calça Jeans',99.99,'15/03/2021'2,,1)
+        ,('Camiseta da Gucci',499.98,'17/04/2021',1,2)
+        ,('Calça Giorgio Armani',410.00,'20/04/2021',2,2)
+        ,('Camiseta Pollo',69.99,'25/04/2021',1,3)
+        ,('Meias de Corrida',19.99,'26/04/2021',2,3)
+
+
+INSERT INTO tbCliente (nomeCliente)
+VALUES ('Giorno Giovanna')
+        ,('Kyo Kusanagi')
+        ,('Omega Rugal')
+        ,('Bi-Han')
+        ,('Mai Shiramura')
+        ,('Ice Cube')
+
+INSERT INTO tbVenda (dataVenda,codCliente,codVendedor,totalVendas)
+VALUES ('16/03/2021',1,1,(8894.00+410.00))
+        ,('16/03/2021',2,2,(69.99*2))
+        ,('16/03/2021',1,3,(99.99+69.99))
+        ,('16/03/2021',2,4,(19.99*2))
+        ,('16/03/2021',1,5,(8894.00+499.98))
+
+INSERT INTO tbItensVenda (,codVenda,codProduto,quantidadeItens,subTotalItens)
+VALUES (1,1,)

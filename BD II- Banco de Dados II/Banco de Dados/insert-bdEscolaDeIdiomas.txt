@@ -1,0 +1,74 @@
+--Sql Server 2014 Express Edition
+--Batches are separated by 'go'
+
+select @@version as 'sql server version'
+
+USE bdEscolaDeIdiomas
+
+INSERT INTO tbAluno (nomeAluno,rgAluno,enderecoAluno,numEndAluno,comp,bairro,cepAluno,cidadeAluno)
+VALUES ('Donquixote Doflamingo','99.666.999-9','Mariejois','305','Castelo no meio da cidade','Baixada Fluminense','12345-678','Rio de Janeiro')
+    ,('Adão Paulista','12.345.678-0','São Paulo','123','Casa dos fundos','Tiradentes','13278-945','São Paulo')
+    ,('Naruto Uzumaki','45.856.917-2','Konoha','001','Gabinete do Hokage','Jõao Pessoa','12345-678','Brasilia')
+    ,('Joãozinho da História','23.467.219-5','Alagoas','151','Apartamento','Cecilion Casteliano','56581-102','Brasilia')
+    ,('Luiz Bolsonaro da Cunha','49.742.165-9','Travessa Seringais','654','Na casa de cima','Guaianazes','12345-678','São Paulo')
+    ,('Relátorio Kowalski','56.156.999-9','Madagascar','385','Apartamento','Baixada Fluminense','12345-678','Rio de Janeiro')
+
+INSERT INTO tbCurso (nomeCurso)
+VALUES ('Inglês')
+    ,('Russo')
+    ,('Português Brasileiro')
+
+INSERT INTO tbPeriodo (descPerido)
+VALUES ('Manhã')
+    ,('Tarde')
+    ,('Noite')
+    
+INSERT INTO tbNivel (descNivel)
+VALUES ('Básico')
+    ,('Intermediário')
+    ,('Avançado')
+
+INSERT INTO tbDiaSemana (descNivel)
+VALUES ('Sexta-Feira')
+    ,('Sábado')
+    ,('Domingo')
+    ,('Segunda-Feira')
+    ,('Terça-Feira')
+    ,('Quarta-Feira')
+
+INSERT INTO tbTurma (horario,idCurso,idPeriodo,idNivel,idDiaSemana)
+VALUES ('10:00:02',1,1,2,4)
+    ,('15:56:41',1,2,1,3)
+    ,('19:13:16',1,3,3,1)
+    ,('10:00:02',3,3,1,5)
+    ,('19:13:16',3,3,3,2)
+    
+INSERT INTO tbAluno (nomeAluno,rgAluno,enderecoAluno,numEndAluno,comp,bairro,cepAluno,cidadeAluno)
+VALUES ('Donquixote Doflamingo','99.666.999-9','Mariejois','305','Castelo no meio da cidade','Baixada Fluminense','12345-678','Rio de Janeiro')
+    ,('Adão Paulista','12.345.678-0','São Paulo','123','Casa dos fundos','Tiradentes','13278-945','São Paulo')
+    ,('Naruto Uzumaki','45.856.917-2','Konoha','001','Gabinete do Hokage','Jõao Pessoa','12345-678','Brasilia')
+    ,('Joãozinho da História','23.467.219-5','Alagoas','151','Apartamento','Cecilion Casteliano','56581-102','Brasilia')
+    ,('Luiz Bolsonaro da Cunha','49.742.165-9','Travessa Seringais','654','Na casa de cima','Guaianazes','12345-678','São Paulo')
+    ,('Relátorio Kowalski','56.156.999-9','Madagascar','385','Apartamento','Baixada Fluminense','12345-678','Rio de Janeiro')
+
+INSERT INTO tbFoneAluno(foneAluno,idAluno)
+VALUES ('99954-1861',1)
+    ,('99454-5921',1)
+    ,('99754-3153',2)
+    ,('96589-9665',2)
+    ,('96658-5221',3)
+    ,('96015-9658',3)
+    ,('94018-1611',4)
+    ,('92369-2771',4)
+    ,('91209-6568',5)
+    ,('93153-4899',5)
+    ,('99055-5669',6)
+    ,('91861-9454',6)
+    
+INSERT INTO tbMatricula(dataMatricula,idAluno,idTurma)
+VALUES ('09/04/2021 22:17:56',1,1)
+    ,('09/04/2021 22:19:51',2,1)
+    ,('09/04/2021 22:20:16',3,1)
+    ,('09/04/2021 22:21:19',4,1)
+    ,('09/04/2021 22:21:28',5,1)
+    ,('10/04/2021 03:03:15',6,1)
