@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Feito no Brasil -->
+
+<!-- Não usei CSS para não ter que enviar 4545246848 pastas e aquirvos -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Aceitando caracteres latinos -->
+    <title>Revisão de PW II - Helder Bonitão </title> <!-- Nome da guia -->
+</head>
+
+<body>
+    <h1 align="center">Solicitação do Passe-Livre</h1><br>
+    <form style="margin-left: 20px;">
+        <!-- Começo do formulário -->
+        <div>
+            <!-- Nome completo -->
+            <label for="input">Nome Completo: </label>
+            <input type="text" name="nomeCompleto" placeholder="Ex: Pedro Pedreiro do Pé Preto" size="50" required>
+            <br> <br>
+        </div>
+
+        <div>
+            <!-- Data de nascimento -->
+            <label for="input">Data de Nascimento: </label>
+            <input type="date" name="dataNascimento" required>
+            <br> <br>
+        </div>
+
+        <div>
+            <!-- Email -->
+            <label for="input">Email: </label>
+            <input type="email" name="email" placeholder="Ex: pedropedreiro@bol.com.br" size="50" required>
+            <br> <br>
+        </div>
+
+        <div>
+            Turma:
+            <select name="turma">
+                <option selected>Selecione uma opção</option>
+                <option value="1">DS - 1°Módulo</option>
+                <option value="2">DS - 2°Módulo</option>
+                <option value="3">DS - 3°Módulo</option>
+            </select>
+            <br> <br>
+        </div>
+
+        <div>
+            Deseja solicitar o passe-livre? <br>
+            <!-- Resposta de sim ou não -->
+            <input type="radio" name="passe_livre" value="sim" required>
+            <label type="radio" >Sim</label>
+            <input type="radio" name="passe_livre" value="nao">
+            <label type="radio" >Não</label>
+            <br><br>
+        </div>
+
+        <div>
+            Seu nível de Escolaridade:<br>
+            <!-- Resposta dos níveis de escolaridade -->
+            <input type="radio" name="escolaridade" value="ensinoFund_completo" required>
+            <label type="radio" >Ensino Fundamental - Completo</label>
+            <br>
+
+            <input type="radio" name="escolaridade" value="ensinoMed_cursando">
+            <label type="radio" >Ensino Médio - Cursando</label>
+            <br>
+
+            <input type="radio" name="escolaridade" value="ensinoMed_completo">
+            <label type="radio" >Ensino Médio - Completo</label>
+            <br><br>
+        </div>
+
+        <div>
+            <!-- Caixa de texto para sujestões e afins -->
+            <label for="">Observações: </label><br>
+            <textarea name="observacao" spellcheck="true" cols="80" rows="10"
+                placeholder="Pode comentar sobre dúvidas,sugestões ou qual quer coisa não ofensiva. =D"></textarea>
+            <br>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <!-- Enviar a resposta // Resetar a resposta -->
+            <button type="submit" > Cadastrar</button>
+            <button type="reset" > Resetar</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
