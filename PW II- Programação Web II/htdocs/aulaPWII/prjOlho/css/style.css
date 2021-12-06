@@ -1,0 +1,71 @@
+.margin-Total{
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important;
+    margin-top: 70px !important;
+    margin-bottom: 100px !important;
+}
+
+.categoria{
+    color: #cb0003;
+    outline: none;
+    display: block;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.64;
+    letter-spacing: 0.6px;
+}
+
+.titulo{
+    padding-left: 1px;
+    font-size: 22px;
+    line-height: 1.09;
+    letter-spacing: -0.8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.texto{
+    color: #333;
+    font-size: 17px;
+    text-indent: 10px;
+    line-height: 1.13;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.carrosel-style{
+    text-shadow: 3px 0px 3px rgba(0, 0, 0, 1);
+    font-size: x-large;
+    color: #fff !important;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.imagem-style{
+    filter: blur(1px);
+}
+
+.data-publicacao{
+    color: #205491;
+    outline: none;
+    display: block;
+    font-size: 11px;
+    line-height: 1.64;
+    letter-spacing: 0.6px;
+}
+
+.td-style{
+    padding-left: 100px;
+    padding-right: 100px;
+    position: static;
+}

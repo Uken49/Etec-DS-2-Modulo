@@ -12,7 +12,6 @@
 
         $noticia->caminhoimagem = "../imagens/noticias/";
 
-
         move_uploaded_file($arquivo, 
                         $noticia->caminhoimagem . $noticia->nomeimagem);
         
@@ -25,7 +24,6 @@
         $noticia ->setIdCategoria($_POST['categoria']);
         $noticia ->setIdReporter($_POST['reporter']);
         $noticia ->setIdStatusNoticia($_POST['statusnoticia']);
-
         
         echo $noticia->cadastrar($noticia);
     }

@@ -58,7 +58,6 @@
     </nav>
 
     <form name="cadastroNoticia" id="cadastroNoticia" action="cadastrar-noticia.php" method="POST" enctype="multipart/form-data" class="mx-5 my-4">
-
         <div class="row">
             <!-- Inicio - Dados noticia  -->
             <div class="col mt-3">
