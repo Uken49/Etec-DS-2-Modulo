@@ -1,8 +1,8 @@
 # Etec-DS
 Etec de Guaianazes - Curso de DS - 2° Módulo - 1° Semestre 2021
 
-  ►Olá!! Eu me chamo Helder e atualmente eu curso o curso de Desenvolvimento de Sistemas na Etec de Guaianazes.                                  
-  ►Neste repositório exibirei alguns de meus trabalhos e exercícios feitos no 2°(segundo) Módulo deste lindo curso.                                     
+  ►Olá!! Eu me chamo Helder e atualmente eu curso o curso de Desenvolvimento de Sistemas na Etec de Guaianazes.<br>
+  ►Neste repositório exibirei alguns de meus trabalhos e exercícios feitos no 2°(segundo) Módulo deste lindo curso.
 
 <div>
   <a href="https://www.facebook.com/OAnciao"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></a>
